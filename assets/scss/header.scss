@@ -1,0 +1,196 @@
+.preload {
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fd7501;
+
+    .sub-1 {
+        color: #fff;
+    }
+
+    img {
+        animation-iteration-count: 5;
+        animation-duration: .8s;
+        animation-name: preload;
+        -webkit-animation-iteration-count: 5;
+        -webkit-animation-duration: .8s;
+        -webkit-animation-name: preload;
+
+        @keyframes preload {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.menu-1 {
+    background-color: #496A4A;
+    position: relative;
+    height: 100px;
+
+    @include res-lg {
+        background-color: transparent;
+    }
+
+    .posicao {
+        width: 70%;
+
+        @include res-md {
+            width: 100%;
+        }
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        transition: .5s;
+        z-index: 10;
+
+        @include res-lg {
+            position: fixed;
+            top: 0;
+            right: -100vw;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            width: 100%;
+            height: 100%;
+            background-color: #FFF;
+        }
+
+        &.ativo {
+            transition: .5s;
+            right: 0 !important;
+        }
+    }
+
+    .logo {
+        width: 150px
+    }
+
+    .close {
+        display: none;
+
+        @include res-lg {
+            display: block;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+
+            &:before,
+            &:after {
+                position: absolute;
+                content: "";
+                width: 50px;
+                height: 4px;
+                border-radius: 10px;
+                transform-origin: center;
+                transform: rotate(45deg);
+                background-color: #fe5002;
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .open {
+        display: none;
+
+        @include res-lg {
+            left: -55px;
+            top: 21px;
+            position: absolute;
+            cursor: pointer;
+            width: 40px;
+            height: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: center;
+            margin: 5px;
+            background-color: #fff;
+            border-radius: 5px;
+
+            span {
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                background-color: #fe5002;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                background-color: #fe5002;
+                top: 5px;
+            }
+
+            &:after {
+                top: unset;
+                bottom: 5px;
+            }
+        }
+    }
+
+    .sub-1 {
+        color: #FFF;
+        font-size: 16px;
+        line-height: 40px;
+        font-weight: 700;
+        letter-spacing: -.32px;
+        text-transform: uppercase;
+        margin-left: 40px;
+
+        @include res-lg {
+            margin-left: 0;
+            margin-bottom: 2rem;
+            font-size: 25px;
+            color: #496A4A;
+        }
+    }
+
+    .wave {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .wave svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 70px;
+        transform: rotateY(180deg);
+    }
+
+    .wave .shape-fill {
+        fill: #FFFFFF;
+    }
+}

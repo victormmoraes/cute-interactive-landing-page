@@ -1,0 +1,55 @@
+.rodape-1 {
+    background-image: url('../img/rodape-1.webp');
+    background-repeat: no-repeat;
+    background-size: 155% 100%;
+    background-position: top center;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+
+    @include res-mac {
+        background-size: 205% 100%;
+    }
+    @include res-xl {
+        background-size: cover;
+    }
+    .add-1 {
+        width: 60px;
+    }
+    @include conteudo {
+        font-size: 18px;
+        line-height: 35px;
+        color: #FFFFFF;
+        font-weight: 700;
+        text-align: center;
+        width: 69%;
+
+        @include res-lg {
+            width: 100%;
+        }
+    }
+
+    .sub-1 {
+        font-size: 35px;
+        line-height: 49px;
+        color: #FFFFFF;
+        font-weight: 700;
+        text-align: center;
+        @include res-md {
+            font-size: 26px;
+        }
+
+        @include res-sm {
+            font-size: 20px;
+        }
+    }
+    .social {
+        width: 57px;
+        height: 57px;
+        border-radius: 50%;
+        background-color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}

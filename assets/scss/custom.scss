@@ -1,0 +1,239 @@
+// bootstrap
+// font awesome
+// redefinicoes
+// color default 
+$c1: #fff; // cor para tag a
+$b1: #00B2FF; // background 1
+$t1: #00B2FF; // cor para titulo 1
+$t2: #000; // cor para titulo 2
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+    outline: none;
+
+    button:focus {
+        outline: none;
+        outline: none;
+    }
+
+    scroll-behavior: smooth;
+
+    a {
+        color: $c1;
+
+        &:active,
+        &:focus {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    // bootstrap resets
+    .form-control:focus {
+        color: unset;
+        background-color: unset;
+        border-color: unset;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+// ---------------------FONTS ------------------------
+// mixin
+@mixin res-full {
+    @media (max-width: 2000px) {
+        @content;
+    }
+}
+
+@mixin res-note {
+    @media (max-width: 1560px) {
+        @content;
+    }
+}
+
+@mixin res-mac {
+    @media (max-width: 1360px) {
+        @content;
+    }
+}
+
+@mixin res-xl {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin res-lg {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin res-md {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin res-sm {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin res-mob {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin res-small {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin res-xsmall {
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
+@mixin res-iphone5 {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+// -----------------GERAIS ------------------
+* {
+    body {
+        font-family: "dinosaur", sans-serif;
+        font-size: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-bottom: 0;
+        line-height: 1rem;
+    }
+
+    a,
+    figure,
+    button {
+        background-color: transparent;
+        margin-bottom: 0;
+    }
+
+    // configuração owl carousel nav e dots
+    .owl-theme {
+        position: relative;
+        display: flex !important;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        .owl-dots,
+        .owl-nav {
+            margin-top: 0;
+            position: absolute;
+            width: 100%;
+        }
+
+        .owl-dots {
+            bottom: 0;
+
+            .owl-dot {
+                span {
+                    border: 1px solid #fff;
+                    width: 12px;
+                    height: 12px;
+                    margin: 5px 5px;
+                }
+
+                &:hover {
+                    span {
+                        background-color: transparent;
+                    }
+                }
+
+                &.active {
+                    span {
+                        background-color: #fff;
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+
+            .owl-next,
+            .owl-prev {
+                position: absolute;
+                z-index: 5;
+                color: #000;
+                font-size: 32px;
+                bottom: 0;
+
+                &:hover {
+                    background-color: transparent;
+                }
+
+                span {
+                    font-size: 60px;
+                    color: #fff;
+                }
+
+                .arrow {
+                    //conforme altera o span de cada dots
+                    font-size: 30px;
+                }
+            }
+
+            .owl-next {
+                right: 8%;
+
+                @include res-sm {
+                    right: 1%;
+                }
+            }
+
+            .owl-prev {
+                left: 8%;
+
+                @include res-sm {
+                    left: 1%;
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------------------imports e configuracao padrao------------------------*/
+
+// add moduloss das paginas
+@import "mixin";
+@import "header";
+@import "footer";
+@import 'banner';
+@import "components";

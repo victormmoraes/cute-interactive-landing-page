@@ -1,0 +1,192 @@
+.banner-1 {
+    @media (min-width: 992px) {
+        margin-bottom: 40px;
+    }
+
+    overflow: hidden;
+
+    .titulo {
+        width: 587px;
+        font-size: 35px;
+        line-height: 49px;
+        color: #707070;
+        margin: 0 auto;
+
+        @include res-note {
+            width: 400px;
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        @include res-lg {
+            width: 60%;
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        @include res-md {
+            width: 80%;
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        @include res-sm {
+            width: 90%;
+        }
+
+        @include res-small {
+            width: 100%;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+
+    .sub-1 {
+        font-size: 35px;
+        color: #FA7221;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        line-height: 49px;
+        width: 373px;
+
+        @include res-note {
+            width: 400px;
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+
+        @include res-lg {
+            font-size: 18px;
+            width: 100%;
+        }
+
+        @include res-md {
+            font-size: 25px;
+        }
+
+        @include res-small {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+
+    .posicao {
+        height: 70%;
+
+        @include res-lg {
+            position: relative;
+        }
+    }
+
+    .img-principal {
+        width: 342px;
+
+        @include res-lg {
+            width: 300px;
+        }
+
+        @include res-md {
+            padding-top: 5em;
+        }
+    }
+
+    .banner-principal {
+        img {
+            width: 100%;
+
+            @include res-note {
+                height: 800px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            @include res-lg {
+                width: 100%;
+                height: auto;
+            }
+
+            @include res-md {
+                height: auto;
+                position: absolute;
+                top: -39em;
+            }
+
+            @include res-sm {
+                top: -41em;
+            }
+
+            @include res-small {
+                top: -43em;
+            }
+
+            @include res-xsmall {
+                top: -41em;
+            }
+
+            @include res-iphone5 {
+                top: -40em;
+            }
+        }
+    }
+
+    .add {
+        width: 450px;
+
+        @include res-lg {
+            width: 100%;
+        }
+    }
+
+    .add-2 {
+        width: 50vw;
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+
+        @include res-lg {
+            width: 100vw;
+        }
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(-10px);
+        }
+
+        80% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .btn-1 {
+        width: 50%;
+
+
+        @media (max-width: 1200px) {
+            width: 60%;
+            height: 38px;
+        }
+
+        @include res-lg {
+            width: 40%;
+        }
+
+        @include res-md {
+            width: 50%;
+        }
+
+        @include res-sm {
+            width: 80%;
+        }
+
+        @include res-small {
+            width: 90%;
+        }
+    }
+}
