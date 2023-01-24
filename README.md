@@ -19,6 +19,11 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
    <img alt="Captura de tela da aplicação" src="assets/lp1.webp">
    <img alt="Captura de tela da aplicação" src="assets/lp2.webp">
    <img alt="Captura de tela da aplicação" src="assets/lp3.webp">
+   
+   <a href="https://user-images.githubusercontent.com/47145180/214329525-f0a685b6-5e08-47c3-a588-75b1477ccc6a.mp4">
+      Assista à captura de tela
+   </a>
+
 </div>
 
 ### 🛠 Tecnologias
